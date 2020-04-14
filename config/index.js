@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports =  {
-  PORT: 7000,
+  PORT: process.env.EXPRESS_PORT,
   MONGO_URI: process.env.MONGO_URI,
-  secretOrKey: "secret"
+  JWT: process.env.JWT
 };

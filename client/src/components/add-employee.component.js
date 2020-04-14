@@ -38,23 +38,23 @@ const AddEmployee = (props) => {
         setLastName(event.target.value)
     }
 
-    const locations = [
-        {
-          value: 'Edmonds'
-        },
-        {
-          value: 'Kirkland'
-        },
-        {
-          value: 'Seattle: Fremont'
-        },
-        {
-          value: 'Seattle: Northgate'
-        },
-        {
-          value: 'Lynnwood'
-        }
-      ]; 
+    // const locations = [
+    //     {
+    //       value: 'Edmonds'
+    //     },
+    //     {
+    //       value: 'Kirkland'
+    //     },
+    //     {
+    //       value: 'Seattle: Fremont'
+    //     },
+    //     {
+    //       value: 'Seattle: Northgate'
+    //     },
+    //     {
+    //       value: 'Lynnwood'
+    //     }
+    //   ]; 
 
     const handleLocation = (event) => {
         setLocation(event.target.value);
@@ -159,6 +159,19 @@ const AddEmployee = (props) => {
                         onChange={handleLastName}
                     />
 
+                    <TextField
+                        required
+                        variant="outlined"
+                        id="location"
+                        label="Location"
+                        name="location"
+                        value={location}
+                        type="text"
+                        fullWidth
+                        style={{marginBottom: '10px'}}
+                        onChange={handleLocation}
+                    />
+{/* 
                     <FormControl variant="outlined" fullWidth required>
                         <InputLabel id="location">Location / Branch</InputLabel>
                         <Select
@@ -180,7 +193,7 @@ const AddEmployee = (props) => {
                             ))}
                         </Select>
                     </FormControl>
-                    
+                     */}
                     <TextField
                         variant="outlined"
                         id="department"
