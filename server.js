@@ -9,7 +9,7 @@ const passport = require("passport");
 const employeesRouter = require('./routes/employees');
 const usersRouter = require("./routes/users");
 const path = require('path');
-const { PORT } = config;
+const { PORT, MONGO_URI } = config;
 
 app.use(
     helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }),
@@ -34,7 +34,7 @@ app.use(
 // DB Config
 // const { MONGO_URI } = config;
 // const uri = `${MONGO_URI}`;
-const db = require('./config').MONGO_URI;
+const db = `${MONGO_URI}`
 mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 
 const connection = mongoose.connection;
