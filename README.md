@@ -9,4 +9,4 @@
 .env file will need the following:  
 `MONGO_URI=<your uri here>`
 
-### npm start
+### npm run dev
